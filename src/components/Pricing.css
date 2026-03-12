@@ -1,5 +1,7 @@
 .pricing-section {
-    background: var(--white);
+    background: var(--off-white);
+    border-top: var(--border);
+    border-bottom: var(--border);
 }
 
 .pricing-headline {
@@ -26,18 +28,30 @@
 }
 
 .pricing-card {
-    background: var(--white);
-    border: var(--border);
-    border-radius: var(--radius-xl);
-    padding: var(--space-7) var(--space-6);
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 24px;
+    padding: 40px 32px;
     position: relative;
-    transition: box-shadow var(--duration-base) var(--ease);
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(229, 50, 50, 0.04);
 }
 
 .pricing-card-highlight {
-    background: var(--black);
-    border-color: var(--black);
-    box-shadow: var(--shadow-xl, 0 20px 60px rgba(0, 0, 0, 0.14));
+    background: rgba(20, 20, 20, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.pricing-card-highlight:hover {
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25), 0 8px 24px rgba(229, 50, 50, 0.2);
 }
 
 .pricing-badge {
@@ -217,14 +231,17 @@
 .pricing-note {
     display: flex;
     align-items: center;
-    gap: var(--space-3);
+    gap: 12px;
     justify-content: center;
-    font-size: var(--text-sm);
+    font-size: 15px;
     color: var(--gray-600);
-    padding: var(--space-4) var(--space-6);
-    border: var(--border);
-    border-radius: var(--radius-lg);
-    background: var(--gray-50);
+    padding: 24px 32px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
 }
 
 .note-icon {

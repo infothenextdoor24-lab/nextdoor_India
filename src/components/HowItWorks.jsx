@@ -8,7 +8,10 @@ import {
     RiMailLine,
     RiWhatsappLine,
     RiGlobalLine,
-    RiMicLine,
+    RiLinkedinLine,
+    RiFacebookCircleLine,
+    RiInstagramLine,
+    RiSlackLine,
 } from 'react-icons/ri'
 import './HowItWorks.css'
 
@@ -47,7 +50,10 @@ const channels = [
     { icon: <RiMailLine size={16} />, label: 'Email' },
     { icon: <RiWhatsappLine size={16} />, label: 'WhatsApp' },
     { icon: <RiGlobalLine size={16} />, label: 'Web Portal' },
-    { icon: <RiMicLine size={16} />, label: 'Podcast' },
+    { icon: <RiLinkedinLine size={16} />, label: 'LinkedIn' },
+    { icon: <RiFacebookCircleLine size={16} />, label: 'Facebook' },
+    { icon: <RiInstagramLine size={16} />, label: 'Instagram' },
+    { icon: <RiSlackLine size={16} />, label: 'Slack' },
 ]
 
 const containerVariants = {

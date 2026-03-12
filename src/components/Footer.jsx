@@ -15,7 +15,7 @@ const Logo = () => (
 )
 
 const footerLinks = {
-    Platform: ['Features', 'Pricing', 'Roadmap', 'Apply Now'],
+    Platform: ['Features', 'Pricing', 'Roadmap', 'Register Now'],
     Company: ['About', 'Team', 'Blog', 'Press'],
     Resources: ['Pitch Templates', 'Grant Guide', 'Startup Canvas', 'Podcast'],
     Connect: ['Email', 'WhatsApp', 'LinkedIn', 'Instagram'],

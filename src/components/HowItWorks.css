@@ -50,46 +50,49 @@
 .hiw-step {
     position: relative;
     z-index: 1;
-    background: var(--white);
-    border: var(--border);
-    border-radius: var(--radius-xl);
-    padding: var(--space-6) var(--space-5);
-    transition: all var(--duration-base) var(--ease);
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 24px;
+    padding: 32px;
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.6);
     cursor: default;
 }
 
 .hiw-step:hover {
-    box-shadow: var(--shadow-lg);
+    border-color: rgba(229, 50, 50, 0.15);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(229, 50, 50, 0.04);
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.8);
 }
 
-.step-red {
-    border-top: 3px solid var(--red);
-}
+.step-red {}
 
-.step-dark {
-    border-top: 3px solid var(--black);
-}
+.step-dark {}
 
 .hiw-step-num {
-    font-family: var(--font-display);
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    color: var(--gray-200);
-    margin-bottom: var(--space-4);
-    text-transform: uppercase;
+    font-family: var(--font-mono, monospace);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-400);
+    letter-spacing: 0.05em;
+    margin-bottom: 24px;
 }
 
 .hiw-step-icon-wrap {
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
+    background: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: var(--radius-md);
-    border: var(--border);
-    margin-bottom: var(--space-4);
-    transition: all var(--duration-base) var(--ease-spring);
+    margin-bottom: 24px;
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .step-red .hiw-step-icon-wrap {
@@ -118,34 +121,37 @@
 }
 
 .hiw-step-title {
-    font-size: var(--text-sm);
+    font-size: 19px;
     font-weight: 700;
     color: var(--black);
-    line-height: 1.35;
-    margin-bottom: var(--space-2);
-    letter-spacing: -0.01em;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    letter-spacing: -0.015em;
 }
 
 .hiw-step-desc {
-    font-size: var(--text-xs);
+    font-size: 15px;
     color: var(--gray-600);
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 /* Channel strip */
 .hiw-channels {
     display: flex;
     align-items: center;
-    gap: var(--space-3);
+    gap: 16px;
     flex-wrap: wrap;
-    padding: var(--space-4) var(--space-6);
-    background: var(--white);
-    border: var(--border);
-    border-radius: var(--radius-lg);
+    padding: 24px 32px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
 }
 
 .hiw-channel-label {
-    font-size: var(--text-sm);
+    font-size: 15px;
     font-weight: 600;
     color: var(--gray-400);
     white-space: nowrap;
@@ -161,15 +167,15 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 7px 14px;
-    background: var(--gray-50);
-    border: var(--border);
-    border-radius: var(--radius-full);
-    font-size: var(--text-sm);
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 24px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--black);
     cursor: default;
-    transition: all var(--duration-fast) var(--ease);
+    transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .hiw-channel-chip svg {
