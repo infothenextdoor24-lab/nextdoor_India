@@ -110,7 +110,7 @@ export default function Solution() {
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                         >
-                            Apply Now <RiArrowRightLine />
+                            Register Now <RiArrowRightLine />
                         </motion.a>
                     </motion.div>
 

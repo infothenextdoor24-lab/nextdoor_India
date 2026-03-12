@@ -10,6 +10,7 @@ import {
     RiBookOpenLine,
     RiRobot2Line,
     RiArrowDownSLine,
+    RiArrowRightLine,
 } from 'react-icons/ri'
 import './Features.css'
 
@@ -158,6 +159,24 @@ export default function Features() {
                             </div>
                         </motion.div>
                     ))}
+                </motion.div>
+
+                <motion.div
+                    className="features-cta"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-40px' }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                >
+                    <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLScgdCWzHAKl1SGP-ukPT8fI5FehTldIjy7b5NToZS4PcytJ7A/viewform?usp=publish-editor"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary btn-lg"
+                    >
+                        Register Now
+                        <RiArrowRightLine size={18} />
+                    </a>
                 </motion.div>
             </div>
         </section>

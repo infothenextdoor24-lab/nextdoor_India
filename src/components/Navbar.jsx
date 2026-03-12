@@ -9,11 +9,9 @@ import './Navbar.css'
 
 const navLinks = [
     { label: 'About', href: '#about' },
-    { label: 'Solution', href: '#solution' },
     { label: 'Features', href: '#features' },
     { label: 'Who We Serve', href: '#audience' },
-    { label: 'Roadmap', href: '#roadmap' },
-    { label: 'Team', href: '#team' },
+    { label: 'Valido', href: '#valido' },
 ]
 
 const Logo = () => (
@@ -84,13 +82,15 @@ export default function Navbar() {
                     </ul>
 
                     <div className="navbar-actions">
-                        <button
+                        <a
                             className="btn btn-primary"
                             id="navbar-cta"
-                            onClick={() => handleNavClick('#contact')}
+                            href="https://docs.google.com/forms/d/e/1FAIpQLScgdCWzHAKl1SGP-ukPT8fI5FehTldIjy7b5NToZS4PcytJ7A/viewform?usp=publish-editor"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
-                            Apply Now <RiArrowRightLine />
-                        </button>
+                            Register Now <RiArrowRightLine />
+                        </a>
                         <button
                             className={`hamburger ${menuOpen ? 'open' : ''}`}
                             aria-label="Toggle menu"
@@ -130,12 +130,14 @@ export default function Navbar() {
                                 </motion.li>
                             ))}
                             <motion.li initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: navLinks.length * 0.04 }}>
-                                <button
+                                <a
                                     className="btn btn-primary mobile-apply-btn"
-                                    onClick={() => handleNavClick('#contact')}
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLScgdCWzHAKl1SGP-ukPT8fI5FehTldIjy7b5NToZS4PcytJ7A/viewform?usp=publish-editor"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
-                                    Apply Now <RiArrowRightLine />
-                                </button>
+                                    Register Now <RiArrowRightLine />
+                                </a>
                             </motion.li>
                         </ul>
                     </motion.div>
