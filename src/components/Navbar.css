@@ -1,0 +1,220 @@
+/* ========== NAVBAR ========== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: var(--nav-height);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid transparent;
+    transition: all var(--duration-base) var(--ease);
+}
+
+.navbar-scrolled {
+    border-bottom-color: var(--gray-100);
+    box-shadow: var(--shadow-xs);
+}
+
+.navbar-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+}
+
+/* Logo */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    flex-shrink: 0;
+}
+
+.logo-mark {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.logo-sq {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 3px;
+}
+
+.logo-sq-tl {
+    background: var(--red);
+    top: 0;
+    left: 0;
+}
+
+.logo-sq-br {
+    background: var(--black);
+    bottom: 0;
+    right: 0;
+}
+
+.logo-wordmark {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    gap: 1px;
+}
+
+.logo-the {
+    font-family: var(--font-display);
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--red);
+    letter-spacing: 0.12em;
+}
+
+.logo-main {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--black);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+/* Nav Links */
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    list-style: none;
+    flex: 1;
+    justify-content: center;
+}
+
+.navbar-link {
+    background: none;
+    border: none;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--gray-600);
+    cursor: pointer;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-md);
+    transition: all var(--duration-fast) var(--ease);
+    position: relative;
+}
+
+.navbar-link:hover {
+    color: var(--black);
+    background: var(--gray-50);
+}
+
+.navbar-link.active {
+    color: var(--red);
+    background: var(--red-subtle);
+}
+
+/* Actions */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    flex-shrink: 0;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: var(--border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    padding: 0;
+    color: var(--black);
+    transition: all var(--duration-fast) var(--ease);
+}
+
+.hamburger:hover {
+    background: var(--gray-50);
+    border-color: var(--gray-200);
+}
+
+.hamburger span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-bottom: var(--border);
+    padding: var(--space-4) var(--space-6);
+    z-index: 999;
+    box-shadow: var(--shadow-md);
+}
+
+.mobile-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.mobile-menu button {
+    width: 100%;
+    background: none;
+    border: none;
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    font-weight: 500;
+    color: var(--gray-800);
+    cursor: pointer;
+    padding: var(--space-3) var(--space-4);
+    text-align: left;
+    border-radius: var(--radius-md);
+    transition: all var(--duration-fast) var(--ease);
+}
+
+.mobile-menu button:hover {
+    background: var(--gray-50);
+    color: var(--black);
+}
+
+.mobile-apply-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    text-align: center !important;
+    margin-top: var(--space-2);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    #navbar-cta {
+        display: none;
+    }
+}

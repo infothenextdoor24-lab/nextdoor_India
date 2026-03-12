@@ -1,0 +1,199 @@
+.hiw-section {
+    background: var(--off-white);
+    border-top: var(--border);
+    border-bottom: var(--border);
+}
+
+.hiw-headline {
+    font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: var(--space-4);
+}
+
+.hiw-sub {
+    font-size: var(--text-lg);
+    color: var(--gray-600);
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Steps grid */
+.hiw-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-5);
+    position: relative;
+    margin-bottom: var(--space-8);
+    padding-top: var(--space-6);
+}
+
+/* Timeline connector */
+.hiw-connector {
+    position: absolute;
+    top: calc(var(--space-6) + 26px);
+    left: calc(12.5% + 26px);
+    right: calc(12.5% + 26px);
+    height: 2px;
+    background: var(--gray-100);
+    z-index: 0;
+    overflow: hidden;
+}
+
+.hiw-connector-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--red) 0%, var(--black) 60%, var(--gray-200) 100%);
+    transform-origin: left;
+}
+
+.hiw-step {
+    position: relative;
+    z-index: 1;
+    background: var(--white);
+    border: var(--border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6) var(--space-5);
+    transition: all var(--duration-base) var(--ease);
+    cursor: default;
+}
+
+.hiw-step:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.step-red {
+    border-top: 3px solid var(--red);
+}
+
+.step-dark {
+    border-top: 3px solid var(--black);
+}
+
+.hiw-step-num {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: var(--gray-200);
+    margin-bottom: var(--space-4);
+    text-transform: uppercase;
+}
+
+.hiw-step-icon-wrap {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    border: var(--border);
+    margin-bottom: var(--space-4);
+    transition: all var(--duration-base) var(--ease-spring);
+}
+
+.step-red .hiw-step-icon-wrap {
+    background: var(--red-subtle);
+    color: var(--red);
+    border-color: rgba(229, 50, 50, 0.2);
+}
+
+.step-dark .hiw-step-icon-wrap {
+    background: var(--gray-50);
+    color: var(--black);
+}
+
+.hiw-step:hover .hiw-step-icon-wrap {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.step-red:hover .hiw-step-icon-wrap {
+    background: var(--red);
+    color: var(--white);
+}
+
+.step-dark:hover .hiw-step-icon-wrap {
+    background: var(--black);
+    color: var(--white);
+}
+
+.hiw-step-title {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.35;
+    margin-bottom: var(--space-2);
+    letter-spacing: -0.01em;
+}
+
+.hiw-step-desc {
+    font-size: var(--text-xs);
+    color: var(--gray-600);
+    line-height: 1.7;
+}
+
+/* Channel strip */
+.hiw-channels {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+    padding: var(--space-4) var(--space-6);
+    background: var(--white);
+    border: var(--border);
+    border-radius: var(--radius-lg);
+}
+
+.hiw-channel-label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--gray-400);
+    white-space: nowrap;
+}
+
+.hiw-channel-sep {
+    width: 1px;
+    height: 20px;
+    background: var(--gray-100);
+}
+
+.hiw-channel-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    background: var(--gray-50);
+    border: var(--border);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--black);
+    cursor: default;
+    transition: all var(--duration-fast) var(--ease);
+}
+
+.hiw-channel-chip svg {
+    color: var(--red);
+}
+
+.hiw-channel-chip:hover {
+    background: var(--red-subtle);
+    border-color: rgba(229, 50, 50, 0.25);
+    color: var(--red);
+}
+
+@media (max-width: 900px) {
+    .hiw-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hiw-connector {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hiw-steps {
+        grid-template-columns: 1fr;
+    }
+}
